@@ -5,6 +5,7 @@ from pydantic import BaseModel
 import pandas as pd
 from typing import Dict
 import io
+import os
 import base64
 import matplotlib.pyplot as plt
 from google import genai
@@ -20,7 +21,7 @@ app.add_middleware(
 )
 
 
-API_KEY = "MY_API_KEY" 
+API_KEY = os.environ.get("MY_API_KEY") 
 
 client = genai.Client(api_key=API_KEY)
 
