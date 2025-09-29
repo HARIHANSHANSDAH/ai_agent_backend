@@ -12,10 +12,7 @@ from google import genai
 from google.genai import types
 
 app = FastAPI()
-origins = [
-    "https://ai-agent-frontend-woad.vercel.app",
-    "https://ai-agent-frontend-31al2epjk-harihanshansdahs-projects.vercel.app"
-]
+origins = ["https://ai-agent-frontend-woad.vercel.app"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
